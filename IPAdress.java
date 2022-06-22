@@ -1,5 +1,6 @@
 package com.network.IPFinder;
 
+import java.awt.Button;
 import java.awt.Frame;
 import java.awt.Label;
 import java.awt.TextField;
@@ -23,7 +24,10 @@ public class IPAddress {
 		TextField label = new TextField();
 	    //display output position, x : 50, y : 120, width : 120, height : 20
 		label.setBounds(50,120,120,20);
+		Button b = new Button("Find IP");
+		b.setBounds(50,150,50,20);
 	    //adding functionality to our app
+		f.add(b);
 		f.add(url);
 		f.add(output);
 		f.add(t);
@@ -36,7 +40,7 @@ public class IPAddress {
 			}
 		});
 	    //action listener over textfield
-		t.addActionListener(new ActionListener() {
+		b.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
